@@ -5,15 +5,15 @@ provider "aws" {
 }
 
 
-# # store the terraform state file in s3
-# terraform {
-#   backend "s3" {
-#     bucket  = "aosnote-terraform-state-bucket"
-#     key     = "build/terraform.tfstate"
-#     region  = "eu-west-2"
-#     profile = "HamzaSalam123"
-#   }
-# }
+# store the terraform state file in s3
+terraform {
+  backend "s3" {
+    bucket  = "hamza-terraform-state-bucket"
+    key     = "build/terraform.tfstate"
+    region  = "eu-west-2"
+    #profile = "HamzaSalam123"
+  }
+}
 
 
 # create default vpc if one does not exit
